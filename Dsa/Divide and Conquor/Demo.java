@@ -34,10 +34,10 @@ class Math{
         if(B == 0) return 1;
         if(B == 1) return A;
         long hf = pow(A,B/2);
-        long ans = matMul(hf,hf);
+        long ans = mulMod(hf,hf);
         if((B&1L) != 0)
         {
-            return mulMod(ans, B);
+            return mulMod(ans, A);
         }
         return ans;
     }
@@ -47,7 +47,7 @@ class Math{
     }
     int combination(int n, int r)
     {
-        long ans =matmul(matMul(fac[n],MI(fac[n-r],m)), MI(fac[r],m));
+        long ans =mulMod(mulMod(fac[n],MI(fac[n-r],M)), MI(fac[r],M));
         return (int)ans;
     }
 }
