@@ -1,3 +1,4 @@
+
 import java.util.*;
 
 public class Demo{
@@ -9,7 +10,6 @@ public class Demo{
         Math m1 = new Math();
         System.out.print(m1.combination(n, r));
         sc.close();
-
     }
 }
 class Math{
